@@ -6,19 +6,19 @@ pipeline {
 
 	 stage('Check java version ') {
             steps {
-                java --version 
+               sh 'java --version' 
             }
         }	
   
           stage('Compile') {
             steps {
-                javac q1.java
+                sh 'javac q1.java'
             }
         }
 	
 	 stage('RUN ') {
             steps {
-                java Hello
+                sh 'java Hello'
             }
         }
 
