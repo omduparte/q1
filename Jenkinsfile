@@ -1,26 +1,8 @@
 pipeline {
     agent any
 
-    stages {
-	
-
-	 stage('Check java version ') {
-            steps {
-               sh 'whoami' 
-            }
-        }	
+    stages {	
   
-          stage('Compile') {
-            steps {
-                sh 'hostnamectl'
-            }
-        }
-	
-	 stage('RUN ') {
-            steps {
-                sh 'java q1.java'
-            }
-        }
 
         stage('Checkout') {
             steps {
