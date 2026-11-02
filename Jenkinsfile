@@ -6,13 +6,13 @@ pipeline {
 
 	 stage('Check java version ') {
             steps {
-               sh 'java --version' 
+               sh 'whoami' 
             }
         }	
   
           stage('Compile') {
             steps {
-                sh 'javac q1.java'
+                sh 'hostnamectl'
             }
         }
 	
