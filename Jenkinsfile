@@ -18,7 +18,7 @@ pipeline {
 	
 	 stage('RUN ') {
             steps {
-                sh 'java Hello'
+                sh 'java q1.java'
             }
         }
 
