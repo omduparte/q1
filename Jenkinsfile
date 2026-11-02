@@ -7,18 +7,24 @@ pipeline {
                 checkout scm
             }
         }
+	
+	stage('Build docker image'){
+	    steps {
+		sh 'docker build -t java-hello .'
+	    }
+	
+	}
 
-        stage('Compile') {
-            steps {
-                sh 'javac q1.java'
-            }
-        }
+	stage('Run docker conainer'){
 
-        stage('Execute') {
-            steps {
-                sh 'java q1'
-            }
-        }
+	    steps {
+		sh 'docker run --rm java-hello'
+	    }
+
+	}
+
+	
+
     }
 
     post {
